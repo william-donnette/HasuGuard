@@ -1,0 +1,13 @@
+{
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.formatOnSave": true,
+	"editor.codeActionsOnSave": {
+		"source.fixAll": "always",
+		"source.organizeImports": "always",
+		"source.sortMembers": "always"
+	},
+	"files.exclude": {
+		"**/node_modules": false
+	},
+	"workbench.iconTheme": "material-icon-theme"
+}
