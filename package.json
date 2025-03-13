@@ -1,6 +1,6 @@
 {
 	"name": "hasuguard",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "A tool to generate standard permissions for authorization library (like Casbin...).",
 	"license": "MIT",
 	"author": "William Donnette",

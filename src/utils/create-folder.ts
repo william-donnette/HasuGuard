@@ -5,7 +5,7 @@ export const createFolder = async (folderPath: string) => {
 	const folderAbsolutePath = path.join(process.cwd(), folderPath);
 	return new Promise<void>((res, rej) => {
 		try {
-			fs.mkdir(folderAbsolutePath, () => {
+			fs.mkdir(folderAbsolutePath, {recursive: true}, () => {
 				res();
 			});
 		} catch (e: any) {
