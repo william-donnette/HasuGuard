@@ -1,7 +1,13 @@
 import axios from 'axios';
 
-export const getHasuraMetadata = async (url: string, adminSecret: string) => {
+export const getHasuraMetadata = async (url: string, adminSecret?: string) => {
 	try {
+		let headers: any = {
+			'Content-Type': 'application/json',
+		};
+		if (headers) {
+			headers['x-hasura-admin-secret'] = adminSecret;
+		}
 		return await axios.post(
 			url,
 			{
@@ -9,10 +15,7 @@ export const getHasuraMetadata = async (url: string, adminSecret: string) => {
 				args: {},
 			},
 			{
-				headers: {
-					'Content-Type': 'application/json',
-					'x-hasura-admin-secret': `${adminSecret}`,
-				},
+				headers,
 			}
 		);
 	} catch (e: any) {
